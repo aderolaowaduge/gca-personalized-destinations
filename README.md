@@ -55,7 +55,7 @@ I was responsible for the development of script.js JavaScript logic, which inclu
 
 - **index.html**: The main HTML structure and layout of the page.
 - **style.css**: The custom CSS for styling the webpage.
-- **script.js**: Contains all JavaScript code responsible for the logic behind the destination selection and rendering.
+- **provided.js** & **script.js**: Contain all JavaScript code responsible for the logic behind the destination selection and rendering.
 - **places.js**: Contains the array of place objects used for filtering and display.
 
 ## Acknowledgments
