@@ -6,7 +6,7 @@ This project is part of the Global Career Accelerator (GCA) program. It is an in
 
 ## Prototype and Research
 Before coding, I developed an early interactive prototype in Google Slides to map out user flows and destination selection ideas.  
-👉 [View the prototype here](LINK_HERE)
+👉 [View the prototype here](https://docs.google.com/presentation/d/1XBO75SCQa0z8RhtZKKbtE23fbfvpk2H09XYyLBuozfc/edit?usp=sharing)
 
 For more details about my market research and user considerations, check out [marketUsersPrototype.md](./marketUsersPrototype.md).
 
