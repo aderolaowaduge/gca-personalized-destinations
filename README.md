@@ -1,89 +1,62 @@
-# Portfolio Project: Marriott Bonvoy Hotels and Villas
+# gca-personalized-destinations
+## Portfolio Project: Marriott Bonvoy Hotels and Villas
 
-## Contents
+## Overview
+This project is part of the Global Career Accelerator (GCA) program. It is an interactive destination recommendation tool that asks users for their preferred destination type (city, beach, or mountains) and then displays a list of tailored travel recommendations based on their selection. The project was implemented with vanilla JavaScript and integrates with an interactive map.
 
-- Introduction
-- Provided Code
-- Deliverable
+## Prototype and Research
+Before coding, I developed an early interactive prototype in Google Slides to map out user flows and destination selection ideas.  
+👉 [View the prototype here](LINK_HERE)
 
-## Introduction
-With your product research finished and your priorities established, it's time to write some code. 
+For more details about my market research and user considerations, check out [marketUsersPrototype.md](./marketUsersPrototype.md).
 
-When the page loads, users will be greeted with a popup modal that asks them where they want to go - "city", "beach", or "mountains". When the user selects an option, the modal will disappear and the page should generate a list of recommended destinations. Your task is to write the logic that will select and render recommendations to the page as cards in the "Recommendations" section and text in the "Destinations" dropdown. 
+## My Contributions
+I was responsible for the development of script.js JavaScript logic, which includes:
 
-There are plenty of comments and scaffolding to help you get the job done in `script.js`. Keep in mind that the tasks in the Deliverable section build upon each other so **you should complete each task in order!**
+1. **Filtering Places by Type:**  
+   Users' preferences (city, beach, or mountain) are used to filter a large array of destination data, providing them with a personalized list of recommendations.
 
-> **🗒 Note:** The only file you'll need to code in to complete this project is `script.js`.
+2. **Generating Destination Cards:**  
+   A dynamic card is created for each destination using DOM manipulation, which showcases the destination's name, location, and an image.
 
-## Provided Code
-
-**`PLACES`** - This is an array that lives in the `places.js` file. Go ahead and examine it to see what each place object looks like. Each place has properties that you'll use for filtering.
-
-**`centerPlaceOnMap(placeName)`** - This function works with the Open Layers API to pan the map to a selected location. 
-
-## Deliverable
-
-### Task 1 - **`filterPlacesByType(typePreference)`**
-
-| Parameter        | Type   | Example Argument |
-| ---------------- | ------ | ---------------- |
-| `typePreference` | String | `"beach"`        |
-
-This function should return a filtered array of places based off the user's type preference.
-
-You'll filter the `PLACES` array by comparing the `type` of each place with the argument supplied to the `typePreference` parameter. The function should return a new array of filtered places.
-
-<hr>
-
-### Task 2 - **`createCard(place)`**
-
-| Parameter   | Type   | Example Argument |
-| ----------- | ------ | ---------------- |
-| `place`     | Object | `{name: "Algarve", location: "Portugal", long: -7.93044, lat: 37.019356, img: "assets/images/popular-destinations/algarve.jpg", type: "beach"}`|
-
-This function accepts a single place object as an argument. It should create a Bootstrap column containing a card for the specified `place` using DOM manipulation and return it. 
-
-To make sure the card is styled properly and integrates with the provided Open Layers API logic, the column should have the same structure as the HTML below. Take special note of the card's `onclick` attribute. It calls the included `centerPlaceOnMap` function that pans the map to the selected location. Be sure pass it the name of the place whose card you're creating. 
+3. **Populating the Recommendations Section:**  
+   The filtered places are dynamically added to the recommendations section as cards, ensuring that the user gets relevant suggestions based on their preference.
 
 
-```html 
-<div class="col">
-  <div class="card h-100" onclick="centerPlaceOnMap(place.name)">
-    <img src="..." class="card-img-top h-100" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">place.name</h5>
-      <p class="card-text">place.location</p>
-    </div>
-  </div>
-</div>
-```
+## Features
+- **Modal Popup:**  
+  On page load, a modal asks users whether they want to go to a city, beach, or mountain destination.
+  
+- **Filtered Recommendations:**  
+  Depending on the user's selection, the app displays destinations that match their preference.
 
-To test your logic, call the function from your console and pass in an object from `PLACES`. You should see the column and card elements displayed in your console.
+- **Interactive Map:**  
+  Clicking on any recommendation will zoom in on the location on the map.
 
-> **Note:** This can be easily accomplished with template literals. To learn more about creating HTML elements with template literals, check out [this awesome article from Wes Bos.](https://wesbos.com/template-strings-html)
+## Technologies Used
+- JavaScript
+- HTML/CSS
+- Bootstrap 
+- Open Layers API (for map integration)
 
-<hr>
+## How to Run the Project Locally
 
-### Task 3 - **`populateRecommendationCards(filteredPlaces)`**
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/gca-personalized-destinations.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd gca-personalized-destinations
+    ```
+3. Open `index.html` in your browser to view the project.
 
-| Parameter        | Type  | Example Argument |
-| ---------------- | ----- | -----------------|
-| `filteredPlaces` | Array | `[{name: "Algarve", location: "Portugal", long: -7.93044, lat: 37.019356, img: "assets/images/popular-destinations/algarve.jpg", type: "beach"}, {name: "Bali", location: "Indonesia", long: 115.188919, lat: -8.409518, img: "assets/images/popular-destinations/bali.jpg", type: "beach", }, ...]` |
+## Files Overview
 
-This function accepts a filtered array of place objects as an argument (e.g. all places with the type "beach"). To start, find the DOM element with the id "recommendations" and clear it out. 
+- **index.html**: The main HTML structure and layout of the page.
+- **style.css**: The custom CSS for styling the webpage.
+- **script.js**: Contains all JavaScript code responsible for the logic behind the destination selection and rendering.
+- **places.js**: Contains the array of place objects used for filtering and display.
 
-Next, you'll need to loop through `filteredPlaces` and use the  `createCard` function you wrote in task 2 to create DOM elements for each place object.
-
-Finally, you'll append each created card to the "recommendations" div to populate the "Recommended for You" section.
-
-<hr>
-
-### Task 4 - **`findPlaceByName(placeName)`**
-
-| Parameter   | Type   | Example Argument |
-| ----------- | ------ | ---------------- |
-| `placeName` | String | `"Bali"`         |
-
-This function should find an object in `PLACES` where the object's `name` property matches the argument passed to the `placeName` parameter. It's used to pin our place on the interactive map and fly to it when clicked from the dropdown menu or the "Recommended for You" section.
-
-To do this, you'll loop through the array of `PLACES` and look for a place object where the `name` property is the same as `placeName`. The function should return that place object.
+## Acknowledgments
+- The initial concept and structure of this project were based on the Global Career Accelerator program's assignment. 
