@@ -1,52 +1,36 @@
 # Market, Users, Prototype
 
-## Understand Your Market
-*Provide links to the 3 websites you explored* 
+## Market Overview
+I explored several platforms offering vacation rental services to understand the competitive landscape. The following websites were particularly relevant for comparison:
 
-https://www.airbnb.com
+- [Airbnb](https://www.airbnb.com)
+- [Vrbo](https://www.vrbo.com)
+- [BluePillow](https://www.bluepillow.com)
 
-https://www.vrbo.com
+These websites were chosen because they provide similar services in offering full-home rentals, which aligns with the idea of recommending destinations based on user preferences. Understanding how these platforms cater to different user needs, including filtering options, price, and accessibility, helped inform my approach to creating a user-friendly recommendation system.
 
-https://www.bluepillow.com
+### Key Features from Competitor Platforms:
+- Ability to share "saved home" lists with others.
+- Filtering options for different types of homes (e.g., cabins, treehouses, lakefront properties).
+- Users can list their own properties.
+- Interactive property images (carousel-style thumbnails).
+- Price filtering for listings.
+- Messaging features for direct contact with property hosts.
+- Region-based currency adjustments (e.g., USD to GBP).
+- Map-based searching to locate listings in specific areas.
+- Search functionality within reviews (e.g., searching for specific words like "bad").
+- Accessibility filters, such as step-free access or disabled parking.
 
+## User Insights
+User research indicates that the Marriott website could better serve users who are still exploring vacation options. Quantitative data from a survey of 3,181 people revealed that just under a quarter knew exactly where they wanted to go, suggesting the site needs to cater more to those open to a variety of possibilities. Video feedback highlighted several common pain points: users found the map feature overwhelming, felt the site was more suited to those with a set destination in mind, and raised concerns about the accessibility of the luxurious home featured on the homepage. While users appreciated the categorization of homes by amenities like pools or patios, they generally preferred to choose a destination first and then find a home, rather than the reverse. 
 
+Additionally, users expressed a desire for more information, especially regarding what makes the "popular" destinations stand out. Overall, there is a clear preference for a more exploration-friendly experience, with better guidance, more helpful explanations, and enhanced support for discovering new destinations.
 
-*Briefly explain why these websites are a relevant comparison* 
+## Prototype
+Here’s a link to the prototype I developed to visualize the user flow and design for the recommendation system:
 
-These websites are a relevant comparison because they are all websites that offer full-home rentals. 
+[View the Prototype](https://docs.google.com/presentation/d/1XBO75SCQa0z8RhtZKKbtE23fbfvpk2H09XYyLBuozfc/present?slide=id.g34db2eb93e0_1_15)
 
-
-*List at least 10 product features*
-
-1. a user can share "saved home" lists with others
-2. a user can filter listings by type of home (cabin, lakefront, tinyhomes, treehouses, etc.)
-3. a user can list their own home
-4. a user can browse through pictures of a property without clicking on the listing (the listing thumbnails are carousels)
-5. a user can filter listings by price
-6. a user can message the host of a listing
-7. a user can change their region to show listings in a different currency (e.g. changing region from the US to the UK to show listings in GBP rather than USD)
-8. a user can move the map around to search for listings in a specific area rather than searching for a specific city
-9. a user can search through reviews (e.g. they can search for the word "bad" and it'll bring up any reviews with the word)
-10. a user can filter listings by accessibility features (step-free access, disabled parking spot, etc.)
-   
-
-## Understand Your Users
-*Write a short paragraph (50-100 words) describing the themes that emerged from the user research*
-
-The user research suggests that the Marriott website could better support users who are still exploring options. Quantitative research showed that just under a quarter of the 3,181 people surveyed had an exact destination in mind, meaning the site needs to cater more toward users who are open to different possibilities. In the video research, both users found the map overwhelming, felt the site was geared toward people with set destinations, and questioned the accessibility of the luxurious home featured on the homepage. Overall, users wish for a more exploration-friendly experience, with more guidance and clearer information about destinations.
-
-
-
-## Define and Prototype
-*Paste a link to your prototype here* 
-> **🗒️ NOTE:** Make sure you share your prototype file so that "anyone with the link" can view it. If we're unable to access your file, we'll be unable to give you credit.
-
-*Don't forget to include a comment if you attempted any of the LevelUps, so that your grader knows to review your work and award the extra credit!*
-
-Prototype Link: https://docs.google.com/presentation/d/1XBO75SCQa0z8RhtZKKbtE23fbfvpk2H09XYyLBuozfc/edit?usp=sharing
-
-Level-Ups
-
-- hi-fi prototype: I added picture thumbnails to the drop down menu. I also added sheer overlays behind pop-ups (both the original "Where do you want to go" pop-up and the city highlight pop-ups)
-
-- added feature/website section: I added blurbs about each city when the user clicks on the destination pin. I added this to provide users with helpful context and insights into what makes each destination unique. This addresses feedback that users wanted more information to explore and decide on destinations that suit their interests.
+### Prototype Enhancements:
+- **Hi-Fi Prototype**: I added picture thumbnails to the destination dropdown menu and created a more polished design with sheer overlays behind the pop-ups (including the initial "Where do you want to go?" modal and the city highlight pop-ups).
+- **City Information**: I added a new feature where users can see a short blurb about each destination when clicking on the destination pin. This additional context helps users understand what makes each location unique, providing them with more information to explore and make informed decisions.
